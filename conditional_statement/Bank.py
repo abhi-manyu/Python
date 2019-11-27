@@ -1,8 +1,9 @@
 import sys
 
+# used imojis to make more interesting
 
 print('**************welcome to SBI bank*****************')
-print('sbi wish u happy banking\n')
+print('sbi wish u happy banking \U0001F970	\n')
 opening_balance=int(input('please enter the opening account balance \n'))
 print('ur account opened successfully')
 secret_pin=input('lets secure ur account from rubbery, enter a security pin \n')
@@ -21,8 +22,7 @@ if choice==1:
               .format(diposite_amount,opening_balance))
            choice2=False
         else:
-           print('''we are sorry , but u have entered an incorrect pin.
-please , try again with correct pin''')
+           print('we are sorry , but u have entered an incorrect pin \nplease , try again with correct pin \U0001F605')
 elif choice==2:
     choice2=True
     while(choice2):
@@ -48,8 +48,7 @@ elif choice==2:
                    print('invalid choice......try again')
                    sys.exit()
             choice2=False
-        print('''we are sorry , but u have entered an incorrect pin.
-please , try again with correct pin''')
+        print('we are sorry , but u have entered an incorrect pin \nplease , try again with correct pin \U0001F605 ')
             
 else:
     choice2=True
@@ -60,4 +59,5 @@ else:
           choice2=False
        else:
           print('u inserted a wrong pin ')
+
 
