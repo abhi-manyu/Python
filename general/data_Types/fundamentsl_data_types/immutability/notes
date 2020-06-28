@@ -1,0 +1,74 @@
+1 . as per we know that i  python everything ia an object, so here in python,
+object creation is a bit different. here first it checks the the value of the object.
+
+2 . If the object is already present inside the memory, then it  don't create a new object
+it just create a new reference and refer it to the same previously created object.
+
+we can check it by the id(object) to check their memory address of object and by is
+ keyword to check if they are pointing to a same object or not as below provided
+ by the python,
+
+ex :
+number1 = 453
+print(number) ------> 453
+print(id(number))-----> 1355656565 like some number
+print(number1 is number2)-------> True
+
+
+
+number 2 = 453
+print(number) ------> 453
+print(id(number))-----> 1355656565 like some number
+print(number2 is number1)-------> True
+
+
+though here number1 and number2 are two different variables, still refer to the same
+object, so their memory location it will give same.
+
+3 . so now this will save time and memory problem for us, but still one bigger problem is
+created, suppose there are 3 variables are pointing to the same object,
+and now eventually the third variable is updated with different value, so at time that
+will affect all other variables pointing to the same object.
+
+4 . So for that problem only, in python all fundamental objects used are made immutable.
+ that means once created and assigned, we are not able to change it's content
+
+5 . NOTE :
+Previously we read about reusability, now it is telling about immutability, so look below.
+In python , the reusability is used upto certain range of object like below
+
+* for integer type ------- 0 to 256--- though there is no any range concept in python, and
+  we can take as many as integers as a number, so here upto 256, while running a python
+  project the python interpolator will create objects of integer type of uptoo commonly
+  used ranges, i.e 0 to 256. So they provided reusability concept. upto 256 by default.
+  After this range, every times a new object is created,
+  and when crating other objects first it checks, if preset then reuse that object
+  if not then creates a new object. That means :
+
+ ex :
+ number1 = 256
+ number2 = 256
+ print(id(number1))------>46546556 some number
+ print(id(number1))------>46546556 same number like above
+ print(number1 is number2)-------> True
+
+
+
+* for Boolean type ------ Always reusability is there,
+previously though, there are no range concept was for integer type so they provided
+reusability upto 256. but here in Boolean, the maximum value can be only 2 either True
+or False, so here allways reusabilty is there.
+
+esample :
+   value = True
+   value2=True
+   print('the boolean example is : {} '.format(value is value2))
+
+
+
+* for String type --------- always, because, here also while starting of the interpertor,
+the object is created, and after that throughout the execution same literals is being
+used, so thats why here also reusability is there,
+
+6 . Note :
+But for compelx and float type, there is no such reusability is there.
